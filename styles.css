@@ -113,6 +113,8 @@ p {
 }
 
 .card-img {
+  width: 200px;
+  height: 150px;
   /* TODO: Add card image styles */
   /* HINT: Set width, height, and object-fit */
 }
