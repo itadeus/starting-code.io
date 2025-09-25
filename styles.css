@@ -852,16 +852,22 @@ input:checked + .slider-round:before {
   border-bottom: 3px solid transparent;
   color: var(--dark);
   text-decoration: none;
+  margin-bottom: 10px;
   /* TODO: Add tab link styles */
   /* HINT: Use padding, cursor, transition, and border-bottom */
 }
 
 .tab-link:hover {
+  color: var(--primary);
+  transform: scale(1.05);
   /* TODO: Add hover styles for tab links */
   /* HINT: Change color */
 }
 
 .tab-link.active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  font-weight: 600;
   /* TODO: Add styles for active tab link */
   /* HINT: Use color and border-bottom */
 }
