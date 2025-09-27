@@ -735,42 +735,83 @@ input:checked + .slider-round:before {
 
 /* Breadcrumb Styles */
 .breadcrumb {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+
   /* TODO: Add breadcrumb styles */
   /* HINT: Use display, list-style, padding, and margin */
 }
 
 .breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
   /* TODO: Add breadcrumb item styles */
   /* HINT: Use display and align-items */
 }
 
 .breadcrumb-item:not(:last-child)::after {
+  content: ">";
+  margin: 0 8px;
+  color: var(--gray);
   /* TODO: Add separator for breadcrumb items */
   /* HINT: Use content, margin, and color */
 }
 
 .breadcrumb-link {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+
   /* TODO: Add breadcrumb link styles */
   /* HINT: Use color, text-decoration, and cursor */
 }
 
 .breadcrumb-link:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  color: var(--secondary);
+
   /* TODO: Add hover styles for breadcrumb links */
   /* HINT: Add text-decoration */
 }
 
 .breadcrumb-item.active {
+  color: var(--dark);
+  font-weight: 600;
+  cursor: default;
+
   /* TODO: Add styles for active breadcrumb item */
   /* HINT: Use color */
 }
 
 /* Modal Styles */
 .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+
   /* TODO: Add modal styles */
   /* HINT: Use display, position, top/left, width, height, background-color, z-index, justify-content, and align-items */
 }
 
 .modal-content {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  
   /* TODO: Add modal content styles */
   /* HINT: Use background-color, border-radius, width, max-width, padding, and box-shadow */
 }
