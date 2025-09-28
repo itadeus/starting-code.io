@@ -897,33 +897,55 @@ input:checked + .slider-round:before {
   visibility: visible;
   opacity: 1;
   transform: scale(1.05);
-  
+
   /* TODO: Add hover styles for tooltip */
   /* HINT: Change visibility and opacity */
 }
 
 /* Accordion Styles */
 .accordion {
+  margin: 20px 0;
+
   /* TODO: Add accordion styles */
   /* HINT: Use margin */
 }
 
 .accordion-item {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
   /* TODO: Add accordion item styles */
   /* HINT: Use border, border-radius, margin-bottom, and overflow */
 }
 
 .accordion-header {
+  padding: 10px 15px;
+  background-color: var(--light-gray);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--dark);
+
   /* TODO: Add accordion header styles */
   /* HINT: Use padding, background-color, cursor, display, justify-content, align-items, and font-weight */
 }
 
 .accordion-content {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
   /* TODO: Add accordion content styles */
   /* HINT: Use padding, max-height, overflow, and transition */
 }
 
 .accordion-content.active {
+  padding: 10px 15px;
+  max-height: 200px;
   /* TODO: Add styles for active accordion content */
   /* HINT: Use padding and max-height */
 }
@@ -1037,11 +1059,18 @@ input:checked + .slider-round:before {
 
 .dropdown-menu.show {
   display: block;
+
   /* TODO: Add styles for visible dropdown menu */
   /* HINT: Change display */
 }
 
 .dropdown-item {
+  padding: 10px 15px;
+  display: block;
+  color: var(--dark);
+  text-decoration: none;
+  transition: var(--transition);
+  
   /* TODO: Add dropdown item styles */
   /* HINT: Use padding, display, color, text-decoration, and transition */
 }
