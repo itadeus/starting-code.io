@@ -811,33 +811,70 @@ input:checked + .slider-round:before {
   max-width: 500px;
   padding: 20px;
   box-shadow: var(--card-shadow);
-  
+
   /* TODO: Add modal content styles */
   /* HINT: Use background-color, border-radius, width, max-width, padding, and box-shadow */
 }
 
 .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
   /* TODO: Add modal header styles */
   /* HINT: Use display, justify-content, align-items, and margin-bottom */
 }
 
 .modal-title {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin: 0;
+
   /* TODO: Add modal title styles */
   /* HINT: Use font-size and color */
 }
 
 .modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray);
+  transition: var(--transition);
+
   /* TODO: Add modal close button styles */
   /* HINT: Use background, border, font-size, cursor, and color */
 }
 
 /* Tooltip Styles */
 .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--dark);
+  cursor: pointer;
+
   /* TODO: Add tooltip styles */
   /* HINT: Use position, display, border-bottom, and cursor */
 }
 
 .tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+  
   /* TODO: Add tooltip text styles */
   /* HINT: Use visibility, width, background-color, color, text-align, border-radius, padding, position, z-index, bottom, left, margin-left, opacity, and transition */
 }
