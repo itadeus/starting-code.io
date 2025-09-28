@@ -1070,23 +1070,36 @@ input:checked + .slider-round:before {
   color: var(--dark);
   text-decoration: none;
   transition: var(--transition);
-  
+
   /* TODO: Add dropdown item styles */
   /* HINT: Use padding, display, color, text-decoration, and transition */
 }
 
 .dropdown-item:hover {
+  background-color: var(--light-gray);
+  transform: scale(1.05);
+
   /* TODO: Add hover styles for dropdown items */
   /* HINT: Change background-color */
 }
 
 /* Toast Styles */
 .toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+
   /* TODO: Add toast container styles */
   /* HINT: Use position, bottom, right, and z-index */
 }
 
 .toast {
+
   /* TODO: Add toast styles */
   /* HINT: Use padding, background-color, border-radius, box-shadow, margin-bottom, display, align-items, justify-content, min-width, transform, opacity, and transition */
 }
@@ -1164,53 +1177,115 @@ input:checked + .slider-round:before {
 
 /* Animation Classes */
 .fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+
   /* TODO: Add fade-in animation */
   /* HINT: Use animation property */
 }
 
 .slide-in {
+  animation: slideIn 0.5s ease-in-out;
+
   /* TODO: Add slide-in animation */
   /* HINT: Use animation property */
 }
 
 .bounce {
+  animation: bounce 0.6s ease-in-out;
+
   /* TODO: Add bounce animation */
   /* HINT: Use animation property */
 }
 
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  } 
   /* TODO: Add fadeIn keyframes */
   /* HINT: Define from and to states with opacity */
 }
 
 @keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
   /* TODO: Add slideIn keyframes */
   /* HINT: Define from and to states with transform and opacity */
 }
 
 @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
   /* TODO: Add bounce keyframes */
   /* HINT: Define keyframe percentages with transform */
 }
 
 /* Panel Header with close button */
 .panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 10px;
+
   /* TODO: Add panel header styles */
   /* HINT: Use display, justify-content, align-items, margin-bottom, border-bottom, and padding-bottom */
 }
 
 .panel-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray);
+  transition: var(--transition);
+
   /* TODO: Add panel close button styles */
   /* HINT: Use background, border, font-size, cursor, color, and transition */
 }
 
 .panel-close:hover {
+  color: var(--dark);
+  transform: scale(1.2);
+
   /* TODO: Add hover styles for panel close button */
   /* HINT: Use color and transform */
 }
 
 /* Pull tab that appears on the left edge when panel is closed */
 .panel-pull-tab {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 10px 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
   /* TODO: Add panel pull tab styles */
   /* HINT: Use position, top, left, transform, background-color, color, padding, border-radius, cursor, box-shadow, z-index, display, align-items, justify-content, and transition */
 }
