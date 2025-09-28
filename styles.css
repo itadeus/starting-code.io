@@ -874,17 +874,30 @@ input:checked + .slider-round:before {
   opacity: 0;
   transition: opacity 0.3s;
   font-size: 0.75rem;
-  
+
   /* TODO: Add tooltip text styles */
   /* HINT: Use visibility, width, background-color, color, text-align, border-radius, padding, position, z-index, bottom, left, margin-left, opacity, and transition */
 }
 
 .tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--dark) transparent transparent transparent;
+
   /* TODO: Add tooltip arrow styles */
   /* HINT: Use content, position, top, left, margin-left, border-width, border-style, and border-color */
 }
 
 .tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1.05);
+  
   /* TODO: Add hover styles for tooltip */
   /* HINT: Change visibility and opacity */
 }
